@@ -291,11 +291,11 @@ GameObject:
   - component: {fileID: 157181107}
   - component: {fileID: 157181106}
   - component: {fileID: 157181105}
-  - component: {fileID: 157181109}
   - component: {fileID: 157181110}
+  - component: {fileID: 157181109}
   m_Layer: 0
   m_Name: Water
-  m_TagString: Untagged
+  m_TagString: TileWater
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -381,12 +381,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 157181104}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16428b598bbc2ec478765b34d972cc45, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f51fe818ab626543af01bc1f0f6a055, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   myElement: 2
   startTimer: 0
-  timer: 3
+  timer: 0
   mySpeed: 0
 --- !u!65 &157181110
 BoxCollider:
@@ -417,7 +417,7 @@ GameObject:
   - component: {fileID: 306919882}
   m_Layer: 0
   m_Name: Fire
-  m_TagString: Untagged
+  m_TagString: TileFire
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -503,12 +503,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 306919877}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16428b598bbc2ec478765b34d972cc45, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f51fe818ab626543af01bc1f0f6a055, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   myElement: 1
   startTimer: 0
-  timer: 3
+  timer: 0
   mySpeed: 0
 --- !u!65 &306919883
 BoxCollider:
@@ -539,7 +539,7 @@ GameObject:
   - component: {fileID: 584711088}
   m_Layer: 0
   m_Name: Wind
-  m_TagString: Untagged
+  m_TagString: TileWind
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -625,7 +625,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 584711083}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16428b598bbc2ec478765b34d972cc45, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f51fe818ab626543af01bc1f0f6a055, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   myElement: 3
@@ -645,6 +645,51 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 4, z: 1}
   m_Center: {x: 0, y: 2, z: 0}
+--- !u!1 &679982334
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 679982335}
+  - component: {fileID: 679982336}
+  m_Layer: 0
+  m_Name: JumpTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &679982335
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679982334}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 859864134}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &679982336
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679982334}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.505
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &859864129
 GameObject:
   m_ObjectHideFlags: 0
@@ -656,17 +701,16 @@ GameObject:
   - component: {fileID: 859864134}
   - component: {fileID: 859864133}
   - component: {fileID: 859864132}
-  - component: {fileID: 859864131}
   - component: {fileID: 859864130}
   - component: {fileID: 859864135}
   - component: {fileID: 859864136}
   - component: {fileID: 859864137}
   - component: {fileID: 859864138}
   - component: {fileID: 859864139}
-  - component: {fileID: 859864140}
+  - component: {fileID: 859864131}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -755,7 +799,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 679982335}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -771,8 +816,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce75542e602481e438d2fb1442a635cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1000
-  jumpPower: 0
+  speed: 500
+  jumpPower: 3
   moveHorizontal: 0
   moveVertical: 0
   isJumping: 0
@@ -827,28 +872,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 859864129}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06d656540a860374eae15da75b4b3c9c, type: 3}
+  m_Script: {fileID: 11500000, guid: af2ffd9e1bde9214aa2f3de92dad0e3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 0
   jumpPower: 0
-  playerSpeed: 0
-  basePlayerSpeed: 0
+  moveHorizontal: 0
+  moveVertical: 0
   isJumping: 0
-  grounded: 0
---- !u!136 &859864140
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 859864129}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.505
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  rb: {fileID: 859864130}
+  mySpeed: 0
+  myJump: 0
+  startTimer: 0
+  timer: 0
 --- !u!1 &984042158
 GameObject:
   m_ObjectHideFlags: 0
@@ -865,7 +901,7 @@ GameObject:
   - component: {fileID: 984042163}
   m_Layer: 0
   m_Name: Earth
-  m_TagString: Untagged
+  m_TagString: TileEarth
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -951,12 +987,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 984042158}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16428b598bbc2ec478765b34d972cc45, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f51fe818ab626543af01bc1f0f6a055, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   myElement: 0
   startTimer: 0
-  timer: 3
+  timer: 0
   mySpeed: 0
 --- !u!65 &984042164
 BoxCollider:
@@ -1067,7 +1103,7 @@ GameObject:
   - component: {fileID: 1758115033}
   m_Layer: 0
   m_Name: RegularFloor
-  m_TagString: Untagged
+  m_TagString: TileRegular
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
