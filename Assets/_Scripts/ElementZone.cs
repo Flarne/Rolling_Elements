@@ -33,7 +33,7 @@ public class ElementZone : Element
 				case Elementals.EARTH:
 					if (myElement == Elementals.WATER)
 					{
-						Debug.Log("Tiles Dissappears in time");
+						//Debug.Log("Tiles Dissappears in time");
 					}
 					if (myElement == Elementals.FIRE)
 					{
@@ -45,6 +45,11 @@ public class ElementZone : Element
 						Debug.Log("SpeedBoost");
 						playerHandler.SpeedBoostPlayer();
 					}
+					if (myElement == Elementals.EARTH)
+					{
+						// Får tillbaka ditt originaltillstånd
+						// Har inte hunnit med denna heller
+					}
 					break;
 				case Elementals.FIRE:
 					if (myElement == Elementals.WATER)
@@ -55,18 +60,23 @@ public class ElementZone : Element
 					if (myElement == Elementals.EARTH)
 					{
 						Debug.Log("Slowing down");
+						playerHandler.SlowPlayer();
 					}
 					if (myElement == Elementals.WIND)
 					{
 						Debug.Log("SpeedBoost");
+						playerHandler.SpeedBoostPlayer();
+					}
+					if (myElement == Elementals.FIRE)
+					{
+						// Får tillbaka ditt originaltillstånd
+						// Har inte hunnit med denna heller
 					}
 					break;
 				case Elementals.WATER:
 					if (myElement == Elementals.FIRE)
 					{
 						Debug.Log("Something Dissapears");
-						//Debug.Log("EVAPORATE!");
-						//Destroy(this.gameObject, 2);
 					}
 					if (myElement == Elementals.EARTH)
 					{
@@ -76,20 +86,32 @@ public class ElementZone : Element
 					{
 						Debug.Log("SpeedBoost");
 					}
+					if (myElement == Elementals.WATER)
+					{
+						// Får tillbaka ditt originaltillstånd
+						// Har inte hunnit med denna heller
+					}
 					break;
 				case Elementals.WIND:
 					if (myElement == Elementals.FIRE)
 					{
 						Debug.Log("SpeedBoost");
-						playerHandler.JumpBoostPlayer();
+						playerHandler.SpeedBoostPlayer();
 					}
 					if (myElement == Elementals.WATER)
 					{
 						Debug.Log("JumpBoost");
+						playerHandler.JumpBoostPlayer();
 					}
 					if (myElement == Elementals.EARTH)
 					{
 						Debug.Log("Slowing Down");
+						playerHandler.SlowPlayer();
+					}
+					if (myElement == Elementals.WIND)
+					{
+						// Får tillbaka ditt originaltillstånd
+						// Har inte hunnit med denna heller
 					}
 					break;
 				case Elementals.REGULAR:
@@ -112,42 +134,41 @@ public class ElementZone : Element
 				case Elementals.EARTH:
 					if (myElement == Elementals.WATER)
 					{
-						Debug.Log("Tiles Dissappears in time");
+						//Debug.Log("Tiles Dissappears in time");
 						//playerHandler.Timer();
 					}
 					if (myElement == Elementals.FIRE)
 					{
-						Debug.Log("Back to regular speed");
 						playerHandler.SpeedBoostPlayer();
 					}
 					if (myElement == Elementals.WIND)
 					{
-						Debug.Log("SpeedBoost");
 						playerHandler.SlowPlayer();
 					}
 					break;
 				case Elementals.FIRE:
 					if (myElement == Elementals.WATER)
 					{
-						Debug.Log("Du är DÖD!!");
-						playerElement.Die();
+						//Debug.Log("Du är DÖD!!");
+						//playerElement.Die();
 					}
 					if (myElement == Elementals.EARTH)
 					{
-						Debug.Log("Slowing down");
+						playerHandler.SpeedBoostPlayer();
 					}
 					if (myElement == Elementals.WIND)
 					{
-						Debug.Log("SpeedBoost");
+						playerHandler.SlowPlayer();
 					}
 					break;
 				case Elementals.WATER:
 					if (myElement == Elementals.FIRE)
 					{
-						Debug.Log("Something Dissapears");
+						//Debug.Log("Something Dissapears");
 					}
 					if (myElement == Elementals.EARTH)
 					{
+						// Har inte fixat denna ännu
 						Debug.Log("Something grows");
 					}
 					if (myElement == Elementals.WIND)
@@ -158,16 +179,17 @@ public class ElementZone : Element
 				case Elementals.WIND:
 					if (myElement == Elementals.FIRE)
 					{
-						Debug.Log("JumpBoost");
-						playerHandler.JumpResetPlayer();
+						playerHandler.SlowPlayer();
 					}
 					if (myElement == Elementals.WATER)
 					{
-						Debug.Log("Slowing down");
+						//Debug.Log("Slowing down");
+						playerHandler.JumpResetPlayer();
 					}
 					if (myElement == Elementals.EARTH)
 					{
-						Debug.Log("Makes you pass through");
+						//Debug.Log("Makes you pass through");
+						playerHandler.SpeedBoostPlayer();
 					}
 					break;
 				case Elementals.REGULAR:

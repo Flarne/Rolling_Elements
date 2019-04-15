@@ -41,12 +41,12 @@ public class PlayerMove : MonoBehaviour {
 		if (Input.GetButton("Jump") && Time.time < jumpMaxTime && isJumping)
 		{
 			jumpTime += Time.deltaTime;
-
-			//rb.AddForce(transform.up * jumpPower);
+			
 			rb.velocity = new Vector3(rb.velocity.x, jumpPower, rb.velocity.z);
 
 			if (jumpTime < 0.45f)
 			{
+				Debug.Log("hej");
 				if (jumpPower < 6)
 				{
 					jumpPower *= 1f;
@@ -54,7 +54,7 @@ public class PlayerMove : MonoBehaviour {
 			}
 			else
 			{
-				jumpPower *= 0.3f;
+				jumpPower *= 0.8f;
 			}
 		}
 		if (Input.GetButtonUp("Jump"))

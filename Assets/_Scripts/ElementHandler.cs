@@ -25,7 +25,7 @@ public class ElementHandler : PlayerMove
 
 	public void SlowPlayer()
 	{
-		mySpeed = (mySpeed * 0.5f) * 1.5f;
+		mySpeed = mySpeed * 0.5f;
 		print(mySpeed);
 		myMove.speed = mySpeed;
 	}

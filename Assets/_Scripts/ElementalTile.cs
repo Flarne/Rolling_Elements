@@ -65,6 +65,21 @@ public class ElementalTile : ElementZone
 				}
 				break;
 			case Elementals.WIND:
+				switch (thingThatEntered.myElement)
+				{
+					case Elementals.EARTH:
+						break;
+					case Elementals.FIRE:
+						break;
+					case Elementals.WATER:
+						break;
+					case Elementals.WIND:
+						break;
+					case Elementals.REGULAR:
+						break;
+					default:
+						break;
+				}
 				break;
 			case Elementals.REGULAR:
 				break;
