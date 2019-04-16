@@ -35,7 +35,7 @@ public class ElementalTile : ElementZone
 						break;
 					case Elementals.WATER:
 						Debug.Log("EVAPORATE!");
-						Destroy(this.gameObject, 2);
+						Destroy(this.gameObject, 4);
 						break;
 					case Elementals.WIND:
 						break;
@@ -50,7 +50,7 @@ public class ElementalTile : ElementZone
 				{
 					case Elementals.EARTH:
 						Debug.Log("EVAPORATE!");
-						Destroy(this.gameObject, 2);
+						Destroy(this.gameObject, 4);
 						break;
 					case Elementals.FIRE:
 						break;
