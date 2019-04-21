@@ -2,14 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ElementHandler : PlayerMove
+public class ElementHandler : MonoBehaviour
 {
 	PlayerMove myMove;
 
 	public float mySpeed;
 	public float myJump;
-	public float startTimer;
-	public float timer;
 
 	public void Start()
 	{
@@ -18,14 +16,9 @@ public class ElementHandler : PlayerMove
 		myJump = myMove.jumpPower;
 	}
 
-	//public void FixedUpdate()
-	//{
-	//	SlowPlayer();
-	//}
-
 	public void SlowPlayer()
 	{
-		mySpeed = mySpeed * 0.5f;
+		mySpeed = mySpeed / 2f;
 		print(mySpeed);
 		myMove.speed = mySpeed;
 	}
@@ -46,8 +39,22 @@ public class ElementHandler : PlayerMove
 
 	public void JumpResetPlayer()
 	{
-		myJump = myJump * 0.5f;
+		myJump = myJump / 2f;
 		Debug.Log("Hopp: " + myJump);
 		myMove.jumpPower = myJump;
+	}
+
+	public void HyperSpeedBoostPlayer()
+	{
+		mySpeed = mySpeed * 4f;
+		print(mySpeed);
+		myMove.speed = mySpeed;
+	}
+
+	public void HyperSlowPlayer()
+	{
+		mySpeed = mySpeed / 4f;
+		print(mySpeed);
+		myMove.speed = mySpeed;
 	}
 }

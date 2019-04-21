@@ -4,15 +4,6 @@ using UnityEngine;
 
 public class ElementZone : Element
 {
-	// Holds Triggerzones Trigger (Player)
-	// switch MyElement
-
-	//PlayerMove myMove;
-
-	public float startTimer;
-	public float timer;
-	public float mySpeed;
-
 
 	public virtual void Enter(Element thingThatEntered)
 	{
@@ -33,20 +24,24 @@ public class ElementZone : Element
 				case Elementals.EARTH:
 					if (myElement == Elementals.WATER)
 					{
+						// Mark kommer försvinna
 						//Debug.Log("Tiles Dissappears in time");
 					}
 					if (myElement == Elementals.FIRE)
 					{
-						Debug.Log("Slowing down");
-						playerHandler.SlowPlayer();
+						// Kulan får en hoppboost
+						Debug.Log("JumpBoost");
+						playerHandler.JumpBoostPlayer();
 					}
 					if (myElement == Elementals.WIND)
 					{
-						Debug.Log("SpeedBoost");
-						playerHandler.SpeedBoostPlayer();
+						// Här ska det vara vara en fartbestraffning
+						Debug.Log("SlowSpeed");
+						playerHandler.SlowPlayer();
 					}
 					if (myElement == Elementals.EARTH)
 					{
+						// Här ska man inte kunna ta sig förbi, står i GDD
 						// Får tillbaka ditt originaltillstånd
 						// Har inte hunnit med denna heller
 					}
@@ -54,21 +49,25 @@ public class ElementZone : Element
 				case Elementals.FIRE:
 					if (myElement == Elementals.WATER)
 					{
-						Debug.Log("Du är DÖD!!");
-						//Destroy(playerElement.gameObject);
+						// här ska det vara en fartbestraffning
+						Debug.Log("Slwo Down");
+						playerHandler.SlowPlayer();
 					}
 					if (myElement == Elementals.EARTH)
 					{
-						Debug.Log("Slowing down");
-						playerHandler.SlowPlayer();
+						// här ska det vara en hoppboost
+						Debug.Log("HoppBoost");
+						playerHandler.JumpBoostPlayer();
 					}
 					if (myElement == Elementals.WIND)
 					{
+						// Här ska det vara en mer betydande fartökning
 						Debug.Log("SpeedBoost");
-						playerHandler.SpeedBoostPlayer();
+						playerHandler.HyperSpeedBoostPlayer();
 					}
 					if (myElement == Elementals.FIRE)
 					{
+						// Här ska man inte kunna ta sig förbi, står i val GDD
 						// Får tillbaka ditt originaltillstånd
 						// Har inte hunnit med denna heller
 					}
@@ -76,18 +75,25 @@ public class ElementZone : Element
 				case Elementals.WATER:
 					if (myElement == Elementals.FIRE)
 					{
-						Debug.Log("Something Dissapears");
+						// Mark ändras till Jord
+						Debug.Log("Ändra mark till jord");
 					}
 					if (myElement == Elementals.EARTH)
 					{
-						Debug.Log("Something grows");
+						// Kulan får en fartbestraffning
+						Debug.Log("Slow down");
+						playerHandler.SlowPlayer();
 					}
 					if (myElement == Elementals.WIND)
 					{
-						Debug.Log("SpeedBoost");
+						// Både Fartökning och hoppboost
+						Debug.Log("HoppBoost");
+						playerHandler.SpeedBoostPlayer();
+						playerHandler.JumpBoostPlayer();
 					}
 					if (myElement == Elementals.WATER)
 					{
+						// Här ska man inte kunna ta sig förbi, står i val GDD
 						// Får tillbaka ditt originaltillstånd
 						// Har inte hunnit med denna heller
 					}
@@ -95,21 +101,24 @@ public class ElementZone : Element
 				case Elementals.WIND:
 					if (myElement == Elementals.FIRE)
 					{
-						Debug.Log("SpeedBoost");
-						playerHandler.SpeedBoostPlayer();
+						// Nästa tile blir till eld och får en fartbestraffning
+						Debug.Log("Slow down och nästa tile ändras till eld");
+						playerHandler.SlowPlayer();
 					}
 					if (myElement == Elementals.WATER)
 					{
+						// Kulan får både Fartökning och hoppboost
 						Debug.Log("JumpBoost");
+						playerHandler.SpeedBoostPlayer();
 						playerHandler.JumpBoostPlayer();
 					}
 					if (myElement == Elementals.EARTH)
 					{
-						Debug.Log("Slowing Down");
-						playerHandler.SlowPlayer();
+						// Marken försvinner
 					}
 					if (myElement == Elementals.WIND)
 					{
+						// Här ska man inte kunna ta sig förbi, står i val GDD
 						// Får tillbaka ditt originaltillstånd
 						// Har inte hunnit med denna heller
 					}
@@ -134,62 +143,59 @@ public class ElementZone : Element
 				case Elementals.EARTH:
 					if (myElement == Elementals.WATER)
 					{
-						//Debug.Log("Tiles Dissappears in time");
-						//playerHandler.Timer();
+						
 					}
 					if (myElement == Elementals.FIRE)
 					{
-						playerHandler.SpeedBoostPlayer();
+						playerHandler.JumpResetPlayer();
 					}
 					if (myElement == Elementals.WIND)
 					{
-						playerHandler.SlowPlayer();
+						playerHandler.SpeedBoostPlayer();
 					}
 					break;
 				case Elementals.FIRE:
 					if (myElement == Elementals.WATER)
 					{
-						//Debug.Log("Du är DÖD!!");
-						//playerElement.Die();
+						playerHandler.SpeedBoostPlayer();
 					}
 					if (myElement == Elementals.EARTH)
 					{
-						playerHandler.SpeedBoostPlayer();
+						playerHandler.JumpResetPlayer();
 					}
 					if (myElement == Elementals.WIND)
 					{
-						playerHandler.SlowPlayer();
+						playerHandler.HyperSlowPlayer();
 					}
 					break;
 				case Elementals.WATER:
 					if (myElement == Elementals.FIRE)
 					{
-						//Debug.Log("Something Dissapears");
+						
 					}
 					if (myElement == Elementals.EARTH)
 					{
-						// Har inte fixat denna ännu
-						Debug.Log("Something grows");
+						playerHandler.SpeedBoostPlayer();
 					}
 					if (myElement == Elementals.WIND)
 					{
-						Debug.Log("SpeedBoost");
+						playerHandler.SlowPlayer();
+						playerHandler.JumpResetPlayer();
 					}
 					break;
 				case Elementals.WIND:
 					if (myElement == Elementals.FIRE)
 					{
-						playerHandler.SlowPlayer();
+						playerHandler.SpeedBoostPlayer();
 					}
 					if (myElement == Elementals.WATER)
 					{
-						//Debug.Log("Slowing down");
+						playerHandler.SlowPlayer();
 						playerHandler.JumpResetPlayer();
 					}
 					if (myElement == Elementals.EARTH)
 					{
-						//Debug.Log("Makes you pass through");
-						playerHandler.SpeedBoostPlayer();
+
 					}
 					break;
 				case Elementals.REGULAR:
@@ -197,7 +203,6 @@ public class ElementZone : Element
 				default:
 					break;
 			}
-			timer = 0.0f;
 		}
 	}
 }

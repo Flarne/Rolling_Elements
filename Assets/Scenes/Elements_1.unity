@@ -146,9 +146,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myElement: 3
-  startTimer: 0
-  timer: 0
-  mySpeed: 0
+  earthFloor: {fileID: 0}
+  fireFloor: {fileID: 0}
+  waterFloor: {fileID: 0}
+  windFloor: {fileID: 0}
 --- !u!65 &9582281
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -337,9 +338,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myElement: 2
-  startTimer: 0
-  timer: 0
-  mySpeed: 0
+  earthFloor: {fileID: 0}
+  fireFloor: {fileID: 0}
+  waterFloor: {fileID: 0}
+  windFloor: {fileID: 0}
 --- !u!65 &101839404
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -537,6 +539,7 @@ GameObject:
   - component: {fileID: 157181105}
   - component: {fileID: 157181110}
   - component: {fileID: 157181109}
+  - component: {fileID: 157181111}
   m_Layer: 0
   m_Name: Water
   m_TagString: TileWater
@@ -629,9 +632,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myElement: 2
-  startTimer: 0
-  timer: 0
-  mySpeed: 0
+  earthFloor: {fileID: 0}
+  fireFloor: {fileID: 0}
+  waterFloor: {fileID: 0}
+  windFloor: {fileID: 0}
 --- !u!65 &157181110
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -643,8 +647,24 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 4, z: 1}
+  m_Size: {x: 0.99, y: 4, z: 0.99}
   m_Center: {x: 0, y: 2, z: 0}
+--- !u!114 &157181111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 157181104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92d2de6d33ffa1c46843670071438a29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  earth: {fileID: 2100000, guid: c088bc0a2f5af11418d52a16e45d5cfa, type: 2}
+  fire: {fileID: 2100000, guid: c6257760fa245b24fbaed83b3a8e6f03, type: 2}
+  water: {fileID: 2100000, guid: 038e3307ac2864744995b89848944ad2, type: 2}
+  wind: {fileID: 2100000, guid: f3ea38d2a89abfb448ad5511c7176f28, type: 2}
 --- !u!1 &240996395
 GameObject:
   m_ObjectHideFlags: 0
@@ -679,9 +699,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myElement: 3
-  startTimer: 0
-  timer: 0
-  mySpeed: 0
+  earthFloor: {fileID: 0}
+  fireFloor: {fileID: 0}
+  waterFloor: {fileID: 0}
+  windFloor: {fileID: 0}
 --- !u!65 &240996397
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -781,6 +802,7 @@ GameObject:
   - component: {fileID: 306919878}
   - component: {fileID: 306919883}
   - component: {fileID: 306919882}
+  - component: {fileID: 306919884}
   m_Layer: 0
   m_Name: Fire
   m_TagString: TileFire
@@ -873,9 +895,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myElement: 1
-  startTimer: 0
-  timer: 0
-  mySpeed: 0
+  earthFloor: {fileID: 2100000, guid: c088bc0a2f5af11418d52a16e45d5cfa, type: 2}
+  fireFloor: {fileID: 2100000, guid: c6257760fa245b24fbaed83b3a8e6f03, type: 2}
+  waterFloor: {fileID: 2100000, guid: 038e3307ac2864744995b89848944ad2, type: 2}
+  windFloor: {fileID: 2100000, guid: f3ea38d2a89abfb448ad5511c7176f28, type: 2}
 --- !u!65 &306919883
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -889,6 +912,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 4, z: 1}
   m_Center: {x: 0, y: 2, z: 0}
+--- !u!114 &306919884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306919877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92d2de6d33ffa1c46843670071438a29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  earth: {fileID: 2100000, guid: c088bc0a2f5af11418d52a16e45d5cfa, type: 2}
+  fire: {fileID: 2100000, guid: c6257760fa245b24fbaed83b3a8e6f03, type: 2}
+  water: {fileID: 2100000, guid: 038e3307ac2864744995b89848944ad2, type: 2}
+  wind: {fileID: 2100000, guid: f3ea38d2a89abfb448ad5511c7176f28, type: 2}
 --- !u!1 &404552607
 GameObject:
   m_ObjectHideFlags: 0
@@ -923,9 +962,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myElement: 3
-  startTimer: 0
-  timer: 0
-  mySpeed: 0
+  earthFloor: {fileID: 0}
+  fireFloor: {fileID: 0}
+  waterFloor: {fileID: 0}
+  windFloor: {fileID: 0}
 --- !u!65 &404552609
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1045,9 +1085,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myElement: 0
-  startTimer: 0
-  timer: 0
-  mySpeed: 0
+  earthFloor: {fileID: 0}
+  fireFloor: {fileID: 0}
+  waterFloor: {fileID: 0}
+  windFloor: {fileID: 0}
 --- !u!65 &577558358
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1239,9 +1280,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myElement: 3
-  startTimer: 0
-  timer: 0
-  mySpeed: 0
+  earthFloor: {fileID: 0}
+  fireFloor: {fileID: 0}
+  waterFloor: {fileID: 0}
+  windFloor: {fileID: 0}
 --- !u!65 &584711089
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1289,9 +1331,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myElement: 3
-  startTimer: 0
-  timer: 0
-  mySpeed: 0
+  earthFloor: {fileID: 0}
+  fireFloor: {fileID: 0}
+  waterFloor: {fileID: 0}
+  windFloor: {fileID: 0}
 --- !u!65 &620613998
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1456,9 +1499,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myElement: 1
-  startTimer: 0
-  timer: 0
-  mySpeed: 0
+  earthFloor: {fileID: 0}
+  fireFloor: {fileID: 0}
+  waterFloor: {fileID: 0}
+  windFloor: {fileID: 0}
 --- !u!65 &857298452
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1729,16 +1773,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af2ffd9e1bde9214aa2f3de92dad0e3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
-  jumpPower: 2
-  moveHorizontal: 0
-  moveVertical: 0
-  isJumping: 0
-  rb: {fileID: 859864130}
   mySpeed: 0
   myJump: 0
-  startTimer: 0
-  timer: 0
 --- !u!1 &984042158
 GameObject:
   m_ObjectHideFlags: 0
@@ -1845,9 +1881,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myElement: 0
-  startTimer: 0
-  timer: 0
-  mySpeed: 0
+  earthFloor: {fileID: 0}
+  fireFloor: {fileID: 0}
+  waterFloor: {fileID: 0}
+  windFloor: {fileID: 0}
 --- !u!65 &984042164
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1895,9 +1932,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myElement: 1
-  startTimer: 0
-  timer: 0
-  mySpeed: 0
+  earthFloor: {fileID: 0}
+  fireFloor: {fileID: 0}
+  waterFloor: {fileID: 0}
+  windFloor: {fileID: 0}
 --- !u!65 &1064863753
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2017,9 +2055,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myElement: 1
-  startTimer: 0
-  timer: 0
-  mySpeed: 0
+  earthFloor: {fileID: 0}
+  fireFloor: {fileID: 0}
+  waterFloor: {fileID: 0}
+  windFloor: {fileID: 0}
 --- !u!65 &1170862972
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2139,9 +2178,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myElement: 2
-  startTimer: 0
-  timer: 0
-  mySpeed: 0
+  earthFloor: {fileID: 0}
+  fireFloor: {fileID: 0}
+  waterFloor: {fileID: 0}
+  windFloor: {fileID: 0}
 --- !u!65 &1196390743
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2153,7 +2193,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 4, z: 1}
+  m_Size: {x: 0.99, y: 4, z: 0.99}
   m_Center: {x: 0, y: 2, z: 0}
 --- !u!65 &1196390744
 BoxCollider:
@@ -2261,9 +2301,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myElement: 0
-  startTimer: 0
-  timer: 0
-  mySpeed: 0
+  earthFloor: {fileID: 0}
+  fireFloor: {fileID: 0}
+  waterFloor: {fileID: 0}
+  windFloor: {fileID: 0}
 --- !u!65 &1198759816
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2413,9 +2454,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myElement: 1
-  startTimer: 0
-  timer: 0
-  mySpeed: 0
+  earthFloor: {fileID: 0}
+  fireFloor: {fileID: 0}
+  waterFloor: {fileID: 0}
+  windFloor: {fileID: 0}
 --- !u!65 &1385530521
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2535,9 +2577,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myElement: 2
-  startTimer: 0
-  timer: 0
-  mySpeed: 0
+  earthFloor: {fileID: 0}
+  fireFloor: {fileID: 0}
+  waterFloor: {fileID: 0}
+  windFloor: {fileID: 0}
 --- !u!65 &1561475993
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2739,9 +2782,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myElement: 0
-  startTimer: 0
-  timer: 0
-  mySpeed: 0
+  earthFloor: {fileID: 0}
+  fireFloor: {fileID: 0}
+  waterFloor: {fileID: 0}
+  windFloor: {fileID: 0}
 --- !u!65 &1663894837
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3010,9 +3054,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myElement: 0
-  startTimer: 0
-  timer: 0
-  mySpeed: 0
+  earthFloor: {fileID: 0}
+  fireFloor: {fileID: 0}
+  waterFloor: {fileID: 0}
+  windFloor: {fileID: 0}
 --- !u!65 &1787285444
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3132,9 +3177,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myElement: 1
-  startTimer: 0
-  timer: 0
-  mySpeed: 0
+  earthFloor: {fileID: 2100000, guid: c088bc0a2f5af11418d52a16e45d5cfa, type: 2}
+  fireFloor: {fileID: 2100000, guid: c6257760fa245b24fbaed83b3a8e6f03, type: 2}
+  waterFloor: {fileID: 2100000, guid: 038e3307ac2864744995b89848944ad2, type: 2}
+  windFloor: {fileID: 2100000, guid: f3ea38d2a89abfb448ad5511c7176f28, type: 2}
 --- !u!65 &1886707474
 BoxCollider:
   m_ObjectHideFlags: 0

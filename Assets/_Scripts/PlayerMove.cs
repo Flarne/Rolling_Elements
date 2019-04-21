@@ -9,12 +9,11 @@ public class PlayerMove : MonoBehaviour {
 	public float speed;
 	float jumpMaxTime;
 	float jumpTime;
-	public float jumpPower;
+	public float jumpPower = 2f;
 	public float moveHorizontal;
 	public float moveVertical;
 
 	public bool isJumping;
-	//private bool jumpButtonDown = false;
 
 	public Rigidbody rb;
 	
@@ -46,14 +45,15 @@ public class PlayerMove : MonoBehaviour {
 
 			if (jumpTime < 0.45f)
 			{
-				Debug.Log("hej");
+				Debug.Log("hoppa");
 				if (jumpPower < 6)
 				{
-					jumpPower *= 1f;
+					jumpPower = jumpPower * 1f;
 				}
 			}
 			else
 			{
+				Debug.Log("Else");
 				jumpPower *= 0.8f;
 			}
 		}
