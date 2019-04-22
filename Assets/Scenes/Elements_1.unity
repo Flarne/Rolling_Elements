@@ -632,10 +632,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myElement: 2
-  earthFloor: {fileID: 0}
-  fireFloor: {fileID: 0}
-  waterFloor: {fileID: 0}
-  windFloor: {fileID: 0}
+  earthFloor: {fileID: 2100000, guid: c088bc0a2f5af11418d52a16e45d5cfa, type: 2}
+  fireFloor: {fileID: 2100000, guid: c6257760fa245b24fbaed83b3a8e6f03, type: 2}
+  waterFloor: {fileID: 2100000, guid: 038e3307ac2864744995b89848944ad2, type: 2}
+  windFloor: {fileID: 2100000, guid: f3ea38d2a89abfb448ad5511c7176f28, type: 2}
 --- !u!65 &157181110
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -910,7 +910,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 4, z: 1}
+  m_Size: {x: 0.99, y: 4, z: 0.99}
   m_Center: {x: 0, y: 2, z: 0}
 --- !u!114 &306919884
 MonoBehaviour:
@@ -1280,10 +1280,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myElement: 3
-  earthFloor: {fileID: 0}
-  fireFloor: {fileID: 0}
-  waterFloor: {fileID: 0}
-  windFloor: {fileID: 0}
+  earthFloor: {fileID: 2100000, guid: c088bc0a2f5af11418d52a16e45d5cfa, type: 2}
+  fireFloor: {fileID: 2100000, guid: c6257760fa245b24fbaed83b3a8e6f03, type: 2}
+  waterFloor: {fileID: 2100000, guid: 038e3307ac2864744995b89848944ad2, type: 2}
+  windFloor: {fileID: 2100000, guid: f3ea38d2a89abfb448ad5511c7176f28, type: 2}
 --- !u!65 &584711089
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1295,7 +1295,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 4, z: 1}
+  m_Size: {x: 0.99, y: 4, z: 0.99}
   m_Center: {x: 0, y: 2, z: 0}
 --- !u!1 &620613996
 GameObject:
@@ -1881,10 +1881,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myElement: 0
-  earthFloor: {fileID: 0}
-  fireFloor: {fileID: 0}
-  waterFloor: {fileID: 0}
-  windFloor: {fileID: 0}
+  earthFloor: {fileID: 2100000, guid: c088bc0a2f5af11418d52a16e45d5cfa, type: 2}
+  fireFloor: {fileID: 2100000, guid: c6257760fa245b24fbaed83b3a8e6f03, type: 2}
+  waterFloor: {fileID: 2100000, guid: 038e3307ac2864744995b89848944ad2, type: 2}
+  windFloor: {fileID: 2100000, guid: f3ea38d2a89abfb448ad5511c7176f28, type: 2}
 --- !u!65 &984042164
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1896,7 +1896,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 4, z: 1}
+  m_Size: {x: 0.99, y: 4, z: 0.99}
   m_Center: {x: 0, y: 2, z: 0}
 --- !u!1 &1064863751
 GameObject:

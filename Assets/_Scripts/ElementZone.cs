@@ -44,6 +44,7 @@ public class ElementZone : Element
 						// Här ska man inte kunna ta sig förbi, står i GDD
 						// Får tillbaka ditt originaltillstånd
 						// Har inte hunnit med denna heller
+
 					}
 					break;
 				case Elementals.FIRE:
