@@ -81,6 +81,9 @@ public class ElementalTile : ElementZone
 				switch (thingThatEntered.myElement)
 				{
 					case Elementals.EARTH:
+						myElement = Elementals.FIRE;
+						MeshRenderer rend = GetComponent<MeshRenderer>();
+						rend.material = fireFloor;
 						break;
 					case Elementals.FIRE:
 						break;
