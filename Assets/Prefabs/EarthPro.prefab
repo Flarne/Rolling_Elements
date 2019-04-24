@@ -324,10 +324,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myElement: 0
-  earthFloor: {fileID: 2100000, guid: c088bc0a2f5af11418d52a16e45d5cfa, type: 2}
-  fireFloor: {fileID: 2100000, guid: c6257760fa245b24fbaed83b3a8e6f03, type: 2}
-  waterFloor: {fileID: 2100000, guid: 038e3307ac2864744995b89848944ad2, type: 2}
-  windFloor: {fileID: 2100000, guid: f3ea38d2a89abfb448ad5511c7176f28, type: 2}
+  earthFloor: {fileID: 2100000, guid: b2df36ae1d242664e8f19f9fa1fe65fc, type: 2}
+  fireFloor: {fileID: 2100000, guid: bc9abaad86a875d428054cf9b6998384, type: 2}
+  waterFloor: {fileID: 2100000, guid: 08ca34a939079fb4e93b3434c6b9137e, type: 2}
+  windFloor: {fileID: 2100000, guid: cd1f75ecb72c009448423350e284d0f0, type: 2}
 --- !u!114 &2663580909787171700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -340,10 +340,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92d2de6d33ffa1c46843670071438a29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  earth: {fileID: 2100000, guid: c088bc0a2f5af11418d52a16e45d5cfa, type: 2}
-  fire: {fileID: 2100000, guid: c6257760fa245b24fbaed83b3a8e6f03, type: 2}
-  water: {fileID: 2100000, guid: 038e3307ac2864744995b89848944ad2, type: 2}
-  wind: {fileID: 2100000, guid: f3ea38d2a89abfb448ad5511c7176f28, type: 2}
+  earth: {fileID: 2100000, guid: b2df36ae1d242664e8f19f9fa1fe65fc, type: 2}
+  fire: {fileID: 2100000, guid: bc9abaad86a875d428054cf9b6998384, type: 2}
+  water: {fileID: 2100000, guid: 08ca34a939079fb4e93b3434c6b9137e, type: 2}
+  wind: {fileID: 2100000, guid: cd1f75ecb72c009448423350e284d0f0, type: 2}
 --- !u!65 &2663580909787171707
 BoxCollider:
   m_ObjectHideFlags: 0

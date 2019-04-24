@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ElementZone : Element
 {
+	//public bool isColliding = true;
 
 	public virtual void Enter(Element thingThatEntered)
 	{
@@ -41,11 +42,16 @@ public class ElementZone : Element
 					}
 					if (myElement == Elementals.EARTH)
 					{
+						//(gameObject.GetComponent(typeof(BoxCollider)) as Collider).isTrigger = false;
+
 						// Här ska man inte kunna ta sig förbi, står i GDD
 						// Får tillbaka ditt originaltillstånd
 						// Har inte hunnit med denna heller
-
 					}
+					//else
+					//{
+					//	(gameObject.GetComponent(typeof(BoxCollider)) as Collider).isTrigger = true;
+					//}
 					break;
 				case Elementals.FIRE:
 					if (myElement == Elementals.WATER)
@@ -102,8 +108,8 @@ public class ElementZone : Element
 				case Elementals.WIND:
 					if (myElement == Elementals.FIRE)
 					{
-						// Nästa tile blir till eld och får en fartbestraffning
-						Debug.Log("Slow down och nästa tile ändras till eld");
+						// får en fartbestraffning
+						Debug.Log("Slow down");
 						playerHandler.SlowPlayer();
 					}
 					if (myElement == Elementals.WATER)

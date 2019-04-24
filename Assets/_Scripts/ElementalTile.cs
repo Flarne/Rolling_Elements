@@ -42,9 +42,6 @@ public class ElementalTile : ElementZone
 					case Elementals.FIRE:
 						break;
 					case Elementals.WATER:
-						// Kanske ska ändra denna till att mark blir till jord istället för att försvinna
-						//Debug.Log("EVAPORATE!");
-						//Destroy(this.gameObject, 3);
 						myElement = Elementals.EARTH;
 						MeshRenderer rend = GetComponent<MeshRenderer>();
 						rend.material = earthFloor;

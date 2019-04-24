@@ -3,18 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Teleport : MonoBehaviour
+public class Teleport : PlayerMove
 {
+	//PlayerMove myMove;
+
 	public Transform target;
-	
+
 	void Start()
 	{
-
+		//myMove = GetComponent<PlayerMove>();
 	}
 
 	private void OnTriggerEnter(Collider collision)
 	{
-		//collision.transform.parent.position = target.position;
-		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+		collision.transform.parent.position = target.position;
+		//resetSpeedHorizontal = myMove.moveHorizontal * 0.0f;
+		//resetSpeedVertical = myMove.moveVertical * 0.0f;
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 0);
 	}
 }
