@@ -19,14 +19,14 @@ public class ElementHandler : MonoBehaviour
 	public void SlowPlayer()
 	{
 		mySpeed = mySpeed / 2f;
-		print(mySpeed);
+		Debug.Log("Fart " + mySpeed);
 		myMove.speed = mySpeed;
 	}
 
 	public void SpeedBoostPlayer()
 	{
 		mySpeed = mySpeed * 2f;
-		print(mySpeed);
+		Debug.Log("Fart " + mySpeed);
 		myMove.speed = mySpeed;
 	}
 
@@ -46,15 +46,15 @@ public class ElementHandler : MonoBehaviour
 
 	public void HyperSpeedBoostPlayer()
 	{
-		mySpeed = mySpeed * 4f;
-		print(mySpeed);
+		mySpeed = mySpeed * 2.5f;
+		Debug.Log("HyperFart " + mySpeed);
 		myMove.speed = mySpeed;
 	}
 
 	public void HyperSlowPlayer()
 	{
-		mySpeed = mySpeed / 4f;
-		print(mySpeed);
+		mySpeed = mySpeed / 2.5f;
+		Debug.Log("HyperFart " + mySpeed);
 		myMove.speed = mySpeed;
 	}
 }

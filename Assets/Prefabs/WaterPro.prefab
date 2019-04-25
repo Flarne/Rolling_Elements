@@ -1,5 +1,49 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1884808359
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1884808360}
+  - component: {fileID: 8911274644206033736}
+  m_Layer: 0
+  m_Name: stoper
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1884808360
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1884808359}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.5, y: 3.5, z: -0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8540867005073081193}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &8911274644206033736
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1884808359}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 0.9, y: 5, z: 0.9}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7874035928509692607
 GameObject:
   m_ObjectHideFlags: 0
@@ -21,7 +65,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8540867005073081193
 Transform:
@@ -33,7 +77,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.5, y: -1.5, z: -5}
   m_LocalScale: {x: 3, y: 2, z: 3}
-  m_Children: []
+  m_Children:
+  - {fileID: 1884808360}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -336,6 +381,7 @@ MonoBehaviour:
   fireFloor: {fileID: 2100000, guid: bc9abaad86a875d428054cf9b6998384, type: 2}
   waterFloor: {fileID: 2100000, guid: 08ca34a939079fb4e93b3434c6b9137e, type: 2}
   windFloor: {fileID: 2100000, guid: cd1f75ecb72c009448423350e284d0f0, type: 2}
+  stoper: {fileID: 8911274644206033736}
 --- !u!114 &6574699091928259376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -363,5 +409,5 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.99, y: 4, z: 0.99}
+  m_Size: {x: 0.99, y: 4, z: 1.01}
   m_Center: {x: 0.5, y: 2, z: -0.5}

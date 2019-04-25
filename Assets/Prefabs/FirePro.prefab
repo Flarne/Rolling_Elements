@@ -21,7 +21,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4137787800796771689
 Transform:
@@ -33,7 +33,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5, y: -0.5, z: 1.5}
   m_LocalScale: {x: 3, y: 2, z: 3}
-  m_Children: []
+  m_Children:
+  - {fileID: 9050039790817942548}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -324,10 +325,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myElement: 1
+  playerInArea: {fileID: 0}
   earthFloor: {fileID: 2100000, guid: b2df36ae1d242664e8f19f9fa1fe65fc, type: 2}
   fireFloor: {fileID: 2100000, guid: bc9abaad86a875d428054cf9b6998384, type: 2}
   waterFloor: {fileID: 2100000, guid: 08ca34a939079fb4e93b3434c6b9137e, type: 2}
   windFloor: {fileID: 2100000, guid: cd1f75ecb72c009448423350e284d0f0, type: 2}
+  stoper: {fileID: 6286173839130916233}
 --- !u!114 &4137787800796771695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -357,3 +360,47 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.99, y: 4, z: 0.99}
   m_Center: {x: 0.5, y: 2, z: -0.5}
+--- !u!1 &5449708295684026379
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9050039790817942548}
+  - component: {fileID: 6286173839130916233}
+  m_Layer: 0
+  m_Name: stoper
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9050039790817942548
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5449708295684026379}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.5, y: 3.5, z: -0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4137787800796771689}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &6286173839130916233
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5449708295684026379}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 0.9, y: 5, z: 0.9}
+  m_Center: {x: 0, y: 0, z: 0}

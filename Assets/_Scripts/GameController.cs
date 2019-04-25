@@ -14,14 +14,4 @@ public class GameController : MonoBehaviour
 		WATER,
 		WIND,
 	}
-	
-	void Start ()
-	{
-		
-	}
-	
-	void Update ()
-	{
-
-	}
 }

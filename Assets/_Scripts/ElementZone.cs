@@ -4,22 +4,176 @@ using UnityEngine;
 
 public class ElementZone : Element
 {
-	//public bool isColliding = true;
-
+	//public BoxCollider playerInArea;
+	private bool playerinside;
+	Elementals lastCheckedElement;
+	Element playerElement;
 	public virtual void Enter(Element thingThatEntered)
 	{
-
+		
 	}
 
+	private void Update()
+	{
+		if (playerinside)
+		{
+			if(playerElement.myElement != lastCheckedElement && playerElement.myElement != myElement)
+			{
+				Debug.Log("Han bytte elment");
+				lastCheckedElement = playerElement.myElement;
+				ElementHandler playerHandler = playerElement.GetComponent<ElementHandler>();
+				// Blir kod som körs
+				switch (playerElement.myElement)
+				{
+					case Elementals.EARTH:
+						if (myElement == Elementals.WATER)
+						{
+							// Mark kommer försvinna
+							//Debug.Log("Tiles Dissappears in time");
+						}
+						if (myElement == Elementals.FIRE)
+						{
+							// Kulan får en hoppboost
+
+							//Debug.Log("JumpBoost");
+							//playerHandler.JumpBoostPlayer();
+						}
+						if (myElement == Elementals.WIND)
+						{
+							// Här ska det vara vara en fartbestraffning
+
+							//Debug.Log("SlowSpeed");
+							//playerHandler.SlowPlayer();
+						}
+						if (myElement == Elementals.EARTH)
+						{
+							//(gameObject.GetComponent(typeof(BoxCollider)) as Collider).isTrigger = false;
+
+							// Här ska man inte kunna ta sig förbi, står i GDD
+							// Får tillbaka ditt originaltillstånd
+							// Har inte hunnit med denna heller
+						}
+						//else
+						//{
+						//	(gameObject.GetComponent(typeof(BoxCollider)) as Collider).isTrigger = true;
+						//}
+						break;
+					case Elementals.FIRE:
+						if (myElement == Elementals.WATER)
+						{
+							// här ska det vara en fartbestraffning
+
+							//Debug.Log("Slwo Down");
+							//playerHandler.SlowPlayer();
+						}
+						if (myElement == Elementals.EARTH)
+						{
+							// här ska det vara en hoppboost
+
+							//Debug.Log("HoppBoost");
+							//playerHandler.JumpBoostPlayer();
+						}
+						if (myElement == Elementals.WIND)
+						{
+							// Här ska det vara en mer betydande fartökning
+
+							//Debug.Log("SpeedBoost");
+							//playerHandler.HyperSpeedBoostPlayer();
+						}
+						if (myElement == Elementals.FIRE)
+						{
+							// Här ska man inte kunna ta sig förbi, står i val GDD
+							// Får tillbaka ditt originaltillstånd
+							// Har inte hunnit med denna heller
+						}
+						break;
+					case Elementals.WATER:
+						if (myElement == Elementals.FIRE)
+						{
+							// Mark ändras till Jord
+
+							//Debug.Log("Ändra mark till jord");
+						}
+						if (myElement == Elementals.EARTH)
+						{
+							// Kulan får en fartbestraffning
+
+							//Debug.Log("Slow down");
+							//playerHandler.SlowPlayer();
+						}
+						if (myElement == Elementals.WIND)
+						{
+							// Både Fartökning och hoppboost
+
+							//Debug.Log("HoppBoost");
+							//playerHandler.SpeedBoostPlayer();
+							//playerHandler.JumpBoostPlayer();
+						}
+						if (myElement == Elementals.WATER)
+						{
+							// Här ska man inte kunna ta sig förbi, står i val GDD
+							// Får tillbaka ditt originaltillstånd
+							// Har inte hunnit med denna heller
+						}
+						break;
+					case Elementals.WIND:
+						if (myElement == Elementals.FIRE)
+						{
+							// får en fartbestraffning
+
+							//Debug.Log("Slow down");
+							//playerHandler.SlowPlayer();
+						}
+						if (myElement == Elementals.WATER)
+						{
+							// Kulan får både Fartökning och hoppboost
+
+							//Debug.Log("JumpBoost");
+							//playerHandler.SpeedBoostPlayer();
+							//playerHandler.JumpBoostPlayer();
+						}
+						if (myElement == Elementals.EARTH)
+						{
+							// Marken försvinner
+						}
+						if (myElement == Elementals.WIND)
+						{
+							// Här ska man inte kunna ta sig förbi, står i val GDD
+							// Får tillbaka ditt originaltillstånd
+							// Har inte hunnit med denna heller
+						}
+						break;
+					case Elementals.REGULAR:
+						break;
+					default:
+						break;
+				}
+			}
+			else if (playerElement.myElement == myElement)
+			{
+				Debug.Log("Försökt byta till samma element");
+				
+				playerElement.GetComponent<ElementalShift>().Shift(lastCheckedElement);
+			}
+		}
+	}
 	private void OnTriggerEnter(Collider other)
 	{
+		//if (playerInArea)
+		//{
+		//	Debug.Log("Inside");
+		//	playerInArea.enabled = false;
+		//}
+
 		if (other.gameObject.tag == "Player")
 		{
-			Element playerElement = other.gameObject.GetComponent<Element>();
+			playerinside = true;
+			playerElement = other.gameObject.GetComponent<Element>();
 			ElementHandler playerHandler = other.gameObject.GetComponent<ElementHandler>();
-
+			lastCheckedElement = playerElement.myElement;
 			Enter(playerElement);
 
+			// Beroende på vilket element som kulan har påverkas kulans beteende med markens element
 			switch (playerElement.myElement)
 			{
 				case Elementals.EARTH:
@@ -140,8 +294,14 @@ public class ElementZone : Element
 
 	private void OnTriggerExit(Collider other)
 	{
+		//if (playerInArea)
+		//{
+		//	playerInArea.enabled = true;
+		//}
+		
 		if (other.gameObject.tag == "Player")
 		{
+			playerinside = false;
 			Element playerElement = other.gameObject.GetComponent<Element>();
 			ElementHandler playerHandler = other.gameObject.GetComponent<ElementHandler>();
 
