@@ -159,11 +159,6 @@ public class ElementZone : Element
 	}
 	private void OnTriggerEnter(Collider other)
 	{
-		//if (playerInArea)
-		//{
-		//	Debug.Log("Inside");
-		//	playerInArea.enabled = false;
-		//}
 
 		if (other.gameObject.tag == "Player")
 		{
@@ -180,51 +175,47 @@ public class ElementZone : Element
 					if (myElement == Elementals.WATER)
 					{
 						// Mark kommer försvinna
-						//Debug.Log("Tiles Dissappears in time");
+						Debug.Log("Tiles Dissappears in time Earth-Water");
 					}
 					if (myElement == Elementals.FIRE)
 					{
 						// Kulan får en hoppboost
-						Debug.Log("JumpBoost");
+						Debug.Log("JumpBoost Earth-Fire:");
 						playerHandler.JumpBoostPlayer();
 					}
 					if (myElement == Elementals.WIND)
 					{
 						// Här ska det vara vara en fartbestraffning
-						Debug.Log("SlowSpeed");
-						playerHandler.SlowPlayer();
+						Debug.Log("Ändra mark till eld Earth-Wind");
+						//playerHandler.SlowPlayer();
 					}
 					if (myElement == Elementals.EARTH)
 					{
-						//(gameObject.GetComponent(typeof(BoxCollider)) as Collider).isTrigger = false;
 
 						// Här ska man inte kunna ta sig förbi, står i GDD
 						// Får tillbaka ditt originaltillstånd
 						// Har inte hunnit med denna heller
 					}
-					//else
-					//{
-					//	(gameObject.GetComponent(typeof(BoxCollider)) as Collider).isTrigger = true;
-					//}
 					break;
+
 				case Elementals.FIRE:
 					if (myElement == Elementals.WATER)
 					{
 						// här ska det vara en fartbestraffning
-						Debug.Log("Slwo Down");
+						Debug.Log("Slwo Down Fire-Water");
 						playerHandler.SlowPlayer();
 					}
 					if (myElement == Elementals.EARTH)
 					{
 						// här ska det vara en hoppboost
-						Debug.Log("HoppBoost");
+						Debug.Log("HoppBoost Fire-Earth");
 						playerHandler.JumpBoostPlayer();
 					}
 					if (myElement == Elementals.WIND)
 					{
 						// Här ska det vara en mer betydande fartökning
-						Debug.Log("SpeedBoost");
-						playerHandler.HyperSpeedBoostPlayer();
+						Debug.Log("SpeedBoost Fire-Wind");
+						playerHandler.SpeedBoostPlayer();
 					}
 					if (myElement == Elementals.FIRE)
 					{
@@ -237,18 +228,18 @@ public class ElementZone : Element
 					if (myElement == Elementals.FIRE)
 					{
 						// Mark ändras till Jord
-						Debug.Log("Ändra mark till jord");
+						Debug.Log("Ändra mark till jord Water-Fire");
 					}
 					if (myElement == Elementals.EARTH)
 					{
 						// Kulan får en fartbestraffning
-						Debug.Log("Slow down");
+						Debug.Log("Slow down Water-Earth");
 						playerHandler.SlowPlayer();
 					}
 					if (myElement == Elementals.WIND)
 					{
 						// Både Fartökning och hoppboost
-						Debug.Log("HoppBoost");
+						Debug.Log("HoppBoost Water-Wind");
 						playerHandler.SpeedBoostPlayer();
 						playerHandler.JumpBoostPlayer();
 					}
@@ -263,13 +254,13 @@ public class ElementZone : Element
 					if (myElement == Elementals.FIRE)
 					{
 						// får en fartbestraffning
-						Debug.Log("Slow down");
+						Debug.Log("Slow down Wind-Fire");
 						playerHandler.SlowPlayer();
 					}
 					if (myElement == Elementals.WATER)
 					{
 						// Kulan får både Fartökning och hoppboost
-						Debug.Log("JumpBoost");
+						Debug.Log("JumpBoost Wind-Water");
 						playerHandler.SpeedBoostPlayer();
 						playerHandler.JumpBoostPlayer();
 					}
@@ -318,7 +309,7 @@ public class ElementZone : Element
 					}
 					if (myElement == Elementals.WIND)
 					{
-						playerHandler.SpeedBoostPlayer();
+						//playerHandler.SpeedBoostPlayer();
 					}
 					break;
 				case Elementals.FIRE:
@@ -332,7 +323,7 @@ public class ElementZone : Element
 					}
 					if (myElement == Elementals.WIND)
 					{
-						playerHandler.HyperSlowPlayer();
+						playerHandler.SlowPlayer();
 					}
 					break;
 				case Elementals.WATER:
