@@ -38,8 +38,8 @@ public class ElementalTile : ElementZone
 						break;
 					case Elementals.WIND:
 						// Här kommer marken försvinna
-						Debug.Log("EVAPORATE!");
-						Destroy(this.gameObject, 1);
+						//Debug.Log("EVAPORATE!");
+						//Destroy(this.gameObject, 1);
 						break;
 					case Elementals.REGULAR:
 						break;
@@ -56,9 +56,9 @@ public class ElementalTile : ElementZone
 						break;
 					case Elementals.WATER:
 						// Ändra mark till Earth
-						myElement = Elementals.EARTH;
-						MeshRenderer rend = GetComponent<MeshRenderer>();
-						rend.material = earthFloor;
+						//myElement = Elementals.EARTH;
+						//MeshRenderer rend = GetComponent<MeshRenderer>();
+						//rend.material = earthFloor;
 						break;
 					case Elementals.WIND:
 						break;
@@ -73,8 +73,8 @@ public class ElementalTile : ElementZone
 				{
 					case Elementals.EARTH:
 						// Här kommer marken försvinna
-						Debug.Log("EVAPORATE!");
-						Destroy(this.gameObject, 1);
+						//Debug.Log("EVAPORATE!");
+						//Destroy(this.gameObject, 1);
 						break;
 					case Elementals.FIRE:
 						break;
@@ -93,9 +93,9 @@ public class ElementalTile : ElementZone
 				{
 					case Elementals.EARTH:
 						// Ändra mark till fire
-						myElement = Elementals.FIRE;
-						MeshRenderer rend = GetComponent<MeshRenderer>();
-						rend.material = fireFloor;
+						//myElement = Elementals.FIRE;
+						//MeshRenderer rend = GetComponent<MeshRenderer>();
+						//rend.material = fireFloor;
 						break;
 					case Elementals.FIRE:
 						break;

@@ -369,7 +369,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myElement: 0
-  playerInArea: {fileID: 0}
   earthFloor: {fileID: 2100000, guid: b2df36ae1d242664e8f19f9fa1fe65fc, type: 2}
   fireFloor: {fileID: 2100000, guid: bc9abaad86a875d428054cf9b6998384, type: 2}
   waterFloor: {fileID: 2100000, guid: 08ca34a939079fb4e93b3434c6b9137e, type: 2}

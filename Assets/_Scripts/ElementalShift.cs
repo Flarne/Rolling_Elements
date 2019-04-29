@@ -10,7 +10,7 @@ public class ElementalShift : MonoBehaviour
 
 	void Update()
 	{
-		if (Input.GetKeyDown(KeyCode.Alpha1))
+		if (Input.GetKeyDown(KeyCode.U))
 		{
 			if (Shift != null)
 			{
@@ -18,7 +18,7 @@ public class ElementalShift : MonoBehaviour
 			}
 		}
 
-		else if (Input.GetKeyDown(KeyCode.Alpha2))
+		else if (Input.GetKeyDown(KeyCode.I))
 		{
 			if (Shift != null)
 			{
@@ -26,7 +26,7 @@ public class ElementalShift : MonoBehaviour
 			}
 		}
 
-		else if (Input.GetKeyDown(KeyCode.Alpha3))
+		else if (Input.GetKeyDown(KeyCode.O))
 		{
 			if (Shift != null)
 			{
@@ -34,7 +34,7 @@ public class ElementalShift : MonoBehaviour
 			}
 		}
 
-		else if (Input.GetKeyDown(KeyCode.Alpha4))
+		else if (Input.GetKeyDown(KeyCode.P))
 		{
 			if (Shift != null)
 			{

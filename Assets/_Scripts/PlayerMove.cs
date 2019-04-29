@@ -10,7 +10,7 @@ public class PlayerMove : MonoBehaviour
 	public float speed;
 	float jumpMaxTime;
 	float jumpTime;
-	public float jumpPower = 2f;
+	public float jumpPower;
 	public float moveHorizontal;
 	public float moveVertical;
 
