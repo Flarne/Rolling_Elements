@@ -25,8 +25,8 @@ public class PlayerMove : MonoBehaviour
 
 	void Update()
 	{
-		// moveHorizontal = Input.GetAxis("Horizontal");
-		// moveVertical = Input.GetAxis("Vertical");
+		//moveHorizontal = Input.GetAxis("Horizontal");
+		//moveVertical = Input.GetAxis("Vertical");
 
 		//Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical).normalized * Time.deltaTime;
 
