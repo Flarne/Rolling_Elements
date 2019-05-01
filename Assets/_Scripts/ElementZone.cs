@@ -162,7 +162,7 @@ public class ElementZone : Element
 
 		if (other.gameObject.tag == "Player")
 		{
-			playerinside = true;
+			//playerinside = true;
 			playerElement = other.gameObject.GetComponent<Element>();
 			ElementHandler playerHandler = other.gameObject.GetComponent<ElementHandler>();
 			lastCheckedElement = playerElement.myElement;
@@ -302,7 +302,7 @@ public class ElementZone : Element
 		
 		if (other.gameObject.tag == "Player")
 		{
-			playerinside = false;
+			//playerinside = false;
 			Element playerElement = other.gameObject.GetComponent<Element>();
 			ElementHandler playerHandler = other.gameObject.GetComponent<ElementHandler>();
 
