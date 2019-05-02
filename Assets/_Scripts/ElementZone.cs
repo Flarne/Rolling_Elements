@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ElementZone : Element
 {
-	//public BoxCollider playerInArea;
+	public BoxCollider playerInArea;
 	private bool playerinside;
 	Elementals lastCheckedElement;
 	Element playerElement;
@@ -17,12 +17,12 @@ public class ElementZone : Element
 	{
 		if (playerinside)
 		{
-			if(playerElement.myElement != lastCheckedElement && playerElement.myElement != myElement)
+			if (playerElement.myElement != lastCheckedElement && playerElement.myElement != myElement)
 			{
 				Debug.Log("Han bytte elment");
 				lastCheckedElement = playerElement.myElement;
 				ElementHandler playerHandler = playerElement.GetComponent<ElementHandler>();
-				// Blir kod som körs
+				//Blir kod som körs
 				switch (playerElement.myElement)
 				{
 					case Elementals.EARTH:
@@ -47,7 +47,7 @@ public class ElementZone : Element
 						}
 						if (myElement == Elementals.EARTH)
 						{
-							//(gameObject.GetComponent(typeof(BoxCollider)) as Collider).isTrigger = false;
+							(gameObject.GetComponent(typeof(BoxCollider)) as Collider).isTrigger = false;
 
 							// Här ska man inte kunna ta sig förbi, står i GDD
 							// Får tillbaka ditt originaltillstånd
@@ -82,6 +82,7 @@ public class ElementZone : Element
 						}
 						if (myElement == Elementals.FIRE)
 						{
+							(gameObject.GetComponent(typeof(BoxCollider)) as Collider).isTrigger = false;
 							// Här ska man inte kunna ta sig förbi, står i val GDD
 							// Får tillbaka ditt originaltillstånd
 							// Har inte hunnit med denna heller
@@ -111,6 +112,7 @@ public class ElementZone : Element
 						}
 						if (myElement == Elementals.WATER)
 						{
+							(gameObject.GetComponent(typeof(BoxCollider)) as Collider).isTrigger = false;
 							// Här ska man inte kunna ta sig förbi, står i val GDD
 							// Får tillbaka ditt originaltillstånd
 							// Har inte hunnit med denna heller
@@ -122,7 +124,7 @@ public class ElementZone : Element
 							// får en fartbestraffning
 
 							//Debug.Log("Slow down");
-							//playerHandler.SlowPlayer();
+							//playerHandler.SlowPlayer();w
 						}
 						if (myElement == Elementals.WATER)
 						{
@@ -138,6 +140,7 @@ public class ElementZone : Element
 						}
 						if (myElement == Elementals.WIND)
 						{
+							(gameObject.GetComponent(typeof(BoxCollider)) as Collider).isTrigger = true;
 							// Här ska man inte kunna ta sig förbi, står i val GDD
 							// Får tillbaka ditt originaltillstånd
 							// Har inte hunnit med denna heller
@@ -152,7 +155,7 @@ public class ElementZone : Element
 			else if (playerElement.myElement == myElement)
 			{
 				Debug.Log("Försökt byta till samma element");
-				
+
 				playerElement.GetComponent<ElementalShift>().Shift(lastCheckedElement);
 			}
 		}
@@ -162,7 +165,7 @@ public class ElementZone : Element
 
 		if (other.gameObject.tag == "Player")
 		{
-			//playerinside = true;
+			playerinside = true;
 			playerElement = other.gameObject.GetComponent<Element>();
 			ElementHandler playerHandler = other.gameObject.GetComponent<ElementHandler>();
 			lastCheckedElement = playerElement.myElement;
@@ -295,14 +298,14 @@ public class ElementZone : Element
 
 	private void OnTriggerExit(Collider other)
 	{
-		//if (playerInArea)
-		//{
-		//	playerInArea.enabled = true;
-		//}
-		
+		if (playerInArea)
+		{
+			playerInArea.enabled = true;
+		}
+
 		if (other.gameObject.tag == "Player")
 		{
-			//playerinside = false;
+			playerinside = false;
 			Element playerElement = other.gameObject.GetComponent<Element>();
 			ElementHandler playerHandler = other.gameObject.GetComponent<ElementHandler>();
 
