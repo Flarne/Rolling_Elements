@@ -24,7 +24,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9179808804801490862}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -195.1, y: 2, z: 5.77}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -54,35 +54,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9179808804801490857}
     m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: offset.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: offset.y
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: thePlayer
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2572613298025468367, guid: fb97ff060c5418f4fa2b0007b6dc7d69,
         type: 3}
       propertyPath: m_Name
       value: Camera_Follow
-      objectReference: {fileID: 0}
-    - target: {fileID: 2572613298025468367, guid: fb97ff060c5418f4fa2b0007b6dc7d69,
-        type: 3}
-      propertyPath: m_TagString
-      value: MainCamera
       objectReference: {fileID: 0}
     - target: {fileID: 2572613298025468364, guid: fb97ff060c5418f4fa2b0007b6dc7d69,
         type: 3}
@@ -138,21 +113,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2572613298025468364, guid: fb97ff060c5418f4fa2b0007b6dc7d69,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2572613298025468364, guid: fb97ff060c5418f4fa2b0007b6dc7d69,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2572613298025468364, guid: fb97ff060c5418f4fa2b0007b6dc7d69,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb97ff060c5418f4fa2b0007b6dc7d69, type: 3}

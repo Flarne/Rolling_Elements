@@ -19,6 +19,6 @@ public class Teleport : PlayerMove
 		collision.transform.parent.position = target.position;
 		//resetSpeedHorizontal = myMove.moveHorizontal * 0.0f;
 		//resetSpeedVertical = myMove.moveVertical * 0.0f;
-		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 0);
+		SceneManager.LoadScene("UIGameOver");
 	}
 }

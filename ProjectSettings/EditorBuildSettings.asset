@@ -14,4 +14,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EarthLevel.unity
     guid: 027df1051bbb12247b457949c613eb69
+  - enabled: 1
+    path: Assets/Scenes/FireLevel.unity
+    guid: 0fd96b4ffed9ff64693bfa69be18fc13
+  - enabled: 1
+    path: Assets/Scenes/WaterLevel.unity
+    guid: 1119c27578d49c54291e1514f2fb0791
+  - enabled: 1
+    path: Assets/Scenes/WindLevel.unity
+    guid: 2d2f2c575f6c7e64fa35ea8aad76744e
+  - enabled: 1
+    path: Assets/Scenes/UIEndRace.unity
+    guid: 3b4cec4cedcc4324589ba2c1d26d87d2
+  - enabled: 1
+    path: Assets/Scenes/UIGameOver.unity
+    guid: bf525fdc7d0162940968e38282b184f8
   m_configObjects: {}
