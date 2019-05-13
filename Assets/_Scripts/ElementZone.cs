@@ -21,7 +21,7 @@ public class ElementZone : Element
 			{
 				Debug.Log("Han bytte elment");
 				lastCheckedElement = playerElement.myElement;
-				ElementHandler playerHandler = playerElement.GetComponent<ElementHandler>();
+				//ElementHandler playerHandler = playerElement.GetComponent<ElementHandler>();
 				//Blir kod som körs
 				switch (playerElement.myElement)
 				{

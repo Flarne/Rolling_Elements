@@ -6,14 +6,7 @@ using TMPro;
 
 public class GoalTime : StartTimer
 {
-
-	private static float timeHere;
 	public static int previousLevel;
-
-	private void Start()
-	{
-		timeHere = endTime;
-	}
 
 	private void Update()
 	{
